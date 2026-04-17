@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los Cypherpunks Escriben Código — Perfiles</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0E0E0E;
+    --bg-card: #161616;
+    --bg-elevated: #1C1C1C;
+    --orange: #E8873C;
+    --orange-dim: #2A2016;
+    --white: #F0F0F0;
+    --gray-1: #999;
+    --gray-2: #666;
+    --gray-3: #444;
+    --gray-4: #2A2A2A;
+    --gray-5: #1E1E1E;
+    --quote-text: #CCCCCC;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Source Sans 3', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--white); -webkit-font-smoothing: antialiased; }
+
+  .hero {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+  }
+  .hero-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 5.5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 em { color: var(--orange); font-style: italic; }
+  .hero-sub {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--gray-1);
+    max-width: 620px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+  }
+  .hero-link {
+    font-size: 0.75rem;
+    color: var(--gray-3);
+    font-family: var(--mono);
+  }
+  .hero-link a { color: var(--orange); text-decoration: none; opacity: 0.7; }
+  .hero-link a:hover { opacity: 1; }
+
+  .intro {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2rem 3.5rem;
+    text-align: center;
+  }
+  .intro p { font-size: 0.95rem; color: var(--gray-2); line-height: 1.9; }
+  .intro strong { color: var(--orange); font-weight: 600; }
+
+  .content { max-width: 960px; margin: 0 auto; padding: 0 2rem 4rem; }
+
+  .divider { height: 1px; background: var(--gray-4); margin: 0 0 2.5rem; }
+
+  .faction-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.4rem; }
+  .faction-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
+  .faction-name { font-size: 1.1rem; font-weight: 600; color: var(--orange); }
+  .faction-desc { font-size: 0.82rem; color: var(--gray-2); margin-left: 18px; margin-bottom: 0.75rem; line-height: 1.6; }
+  .faction-lore {
+    background: var(--bg-card);
+    border: 0.5px solid var(--gray-4);
+    border-left: 2px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.75rem;
+    font-size: 0.85rem;
+    color: var(--gray-1);
+    line-height: 1.8;
+  }
+  .faction-lore strong { color: var(--orange); font-weight: 600; }
+  .faction-lore em { color: var(--quote-text); font-style: italic; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 3rem;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 0.5px solid var(--gray-4);
+    border-radius: 14px;
+    padding: 1.25rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .card:hover { border-color: var(--gray-3); transform: translateY(-2px); }
+
+  .card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .av {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--orange-dim);
+    color: var(--orange);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; font-weight: 600; flex-shrink: 0;
+    letter-spacing: 0.03em;
+  }
+  .name { font-size: 1rem; font-weight: 600; color: var(--white); line-height: 1.3; }
+  .role { font-size: 0.78rem; color: var(--gray-2); margin-top: 2px; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+  .tag {
+    font-size: 0.68rem; font-weight: 600;
+    padding: 3px 10px; border-radius: 100px;
+    background: var(--orange-dim); color: var(--orange);
+    letter-spacing: 0.01em;
+  }
+
+  .bio { font-size: 0.85rem; color: var(--gray-1); line-height: 1.75; }
+  .bio em { color: var(--quote-text); font-style: italic; }
+
+  .quote {
+    border-left: 2px solid var(--orange);
+    padding-left: 12px;
+    margin-top: 12px;
+    border-radius: 0;
+  }
+  .quote p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--quote-text);
+    line-height: 1.65;
+  }
+  .quote + .quote { margin-top: 8px; }
+
+  .dates {
+    font-size: 0.7rem;
+    color: var(--gray-3);
+    font-family: var(--mono);
+    margin-top: 10px;
+  }
+
+  .footer {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+    text-align: center;
+    border-top: 1px solid var(--gray-4);
+  }
+  .footer p { font-size: 0.8rem; color: var(--gray-3); line-height: 1.8; }
+  .book-rec {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--orange-dim);
+    border-radius: 10px;
+    font-size: 0.82rem;
+    color: var(--orange);
+  }
+
+  @media (max-width: 680px) {
+    .grid { grid-template-columns: 1fr; }
+    .hero { padding: 3.5rem 1.5rem 2rem; }
+    .content { padding: 0 1.25rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-label">Serie documental · Reason TV · 4 partes</div>
+  <h1>Los cypherpunks<br><em>escriben código</em></h1>
+  <p class="hero-sub">
+    A principios de los 90, un grupo de matemáticos, hackers y filósofos vieron en la criptografía un arma para defender la libertad humana en la era digital. Esta es la guía de sus protagonistas.
+  </p>
+  <div class="hero-link">
+    <a href="https://www.youtube.com/watch?v=9vM0oIEhMag" target="_blank">youtube.com/watch?v=9vM0oIEhMag</a>
+  </div>
+</header>
+
+<section class="intro">
+  <p>
+    El movimiento se dividió en dos corrientes: los <strong>criptoanarquistas</strong>, que buscaban un mundo virtual paralelo impermeable al gobierno, y los <strong>Hayekianos de Alta Tecnología</strong>, que querían transformar la sociedad desde dentro. Entre ambos, un grupo de <strong>criptógrafos</strong> construyó las armas matemáticas que hicieron posible el sueño.
+  </p>
+</section>
+
+<main class="content">
+
+<!-- ═══ COFUNDADORES ═══ -->
+<div class="divider"></div>
+<div class="faction-header">
+  <div class="faction-dot"></div>
+  <div class="faction-name">Cofundadores cypherpunk</div>
+</div>
+<div class="faction-desc">Los tres fundadores del movimiento y su lista de correo (1992)</div>
+<div class="faction-lore">
+  En 1993, los tres aparecieron en la portada de <em>Wired</em> con máscaras, bajo el titular <strong>"Rebeldes con causa: tu privacidad"</strong>. Lo que los unía era una convicción radical: la privacidad no puede depender de leyes ni de políticos — solo del código. Hughes lo articuló en su Manifiesto: <em>"Privacidad no es secreto. La privacidad es el poder de revelarse selectivamente al mundo."</em> Pero más allá de la filosofía compartida, cada fundador representaba una faceta diferente del movimiento: May era el visionario radical que escribió el manifiesto fundacional, Hughes era el constructor pragmático que creó el primer remailer anónimo y administró la lista de correo, y Gilmore era el guerrero legal que llevó la batalla del cifrado a los tribunales. Juntos, convirtieron una idea matemática en un movimiento global.
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">TM</div>
+      <div><div class="name">Timothy C. May</div><div class="role">Físico · Criptoanarquista</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Criptoanarquía</span>
+      <span class="tag">BlackNet</span>
+      <span class="tag">Intel</span>
+    </div>
+    <p class="bio">Ex-científico de Intel donde resolvió el "problema de la partícula alfa" en chips de memoria. Se retiró con opciones sobre acciones a leer ciencia ficción y pensar en el futuro de las redes. Autor del <em>Manifiesto Criptoanarquista</em> (1988), modelado a partir del Manifiesto Comunista. Visionó BlackNet: un mercado virtual anónimo impermeable al rastreo. Su filosofía del cambio era puramente tecnológica — inspirada en David Friedman y Vernor Vinge — rechazando la acción política.</p>
+    <div class="quote"><p>"Las fronteras nacionales son solo obstáculos en la autopista de la información."</p></div>
+    <div class="quote"><p>"¿Se puede hacer el mal con esta tecnología? Sí. Lidia con ello."</p></div>
+    <div class="dates">1951 – 2018</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">EH</div>
+      <div><div class="name">Eric Hughes</div><div class="role">Matemático · Cofundador</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Manifiesto</span>
+      <span class="tag">Lista de correo</span>
+    </div>
+    <p class="bio">Matemático que cofundó la lista de correo Cypherpunk en otoño de 1992 junto con May y Gilmore. Las reuniones comenzaron en Cygnus Solutions, en la Bahía de San Francisco. Acuñó el lema definitorio del movimiento — <em>"Los Cypherpunks escriben código"</em> — enfatizando la acción tecnológica por encima del activismo político. Para 1994 la lista tenía 700 suscriptores.</p>
+    <div class="quote"><p>"Los Cypherpunks son activistas de la criptografía."</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">JG</div>
+      <div><div class="name">John Gilmore</div><div class="role">Activista · Cofundador EFF</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Primera enmienda</span>
+      <span class="tag">Guerras cripto</span>
+    </div>
+    <p class="bio">Quinto empleado de Sun Microsystems y cofundador de la Electronic Frontier Foundation. Arriesgó ir a la cárcel para demostrar que el cifrado era libertad de expresión. Imprimió camisetas con código fuente de cifrado y las envió a la oficina de control de municiones. El gobierno nunca respondió porque sabía que decir "no" provocaría una demanda que perdería.</p>
+    <div class="quote"><p>"Teníamos una comunidad de mil personas dispersas probando ideas sobre cómo sortear al gobierno para llevar el cifrado a las masas."</p></div>
+    <div class="quote"><p>"Las guerras criptográficas siguen en curso. Es una lucha constante."</p></div>
+  </div>
+
+</div>
+
+<!-- ═══ CRIPTOANARQUISTAS ═══ -->
+<div class="divider"></div>
+<div class="faction-header">
+  <div class="faction-dot"></div>
+  <div class="faction-name">El campo criptoanarquista</div>
+</div>
+<div class="faction-desc">Influencias intelectuales y aliados de la visión radical de Tim May</div>
+<div class="faction-lore">
+  <em>"Un fantasma acecha al mundo moderno — el fantasma de la criptoanarquía."</em> Así abre el Manifiesto Criptoanarquista de Tim May (1988), modelado sobre el Manifiesto Comunista. Esta facción creía en una <strong>teoría tecnológica del cambio histórico</strong>: así como la imprenta destruyó el monopolio de la Iglesia sobre la información, la criptografía destruiría el monopolio del Estado sobre el dinero, la identidad y la vigilancia. No pedían permiso — construían. Su visión era un mundo donde las interacciones fueran irrastreables, las reputaciones digitales reemplazaran los documentos de identidad, y los "bancos suizos en el ciberespacio" hicieran imposible la confiscación gubernamental. May lo llamó criptoanarquía; Friedman proveyó la base filosófica con su anarcocapitalismo; Back encarnó el espíritu con código funcional; Hettinga diseñó la arquitectura financiera; y Wilcox y McCoy construyeron las redes peer-to-peer.
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">DF</div>
+      <div><div class="name">David D. Friedman</div><div class="role">Economista · Físico · Anarcocapitalista</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Machinery of Freedom</span>
+      <span class="tag">Anarcocapitalismo</span>
+    </div>
+    <p class="bio">Hijo de Milton Friedman (Nobel de Economía). Físico teórico de formación, economista por vocación. Su libro <em>The Machinery of Freedom</em> (1973) fue la inspiración directa de Tim May para la criptoanarquía. May y Friedman se retroalimentaron mutuamente: Friedman dijo que "robó ideas de los Cypherpunks" y May "se las robó de vuelta". Argumentó que las guerras modernas entre gobiernos y ciudadanos son guerras de información, no guerras físicas.</p>
+    <div class="quote"><p>"El cifrado significa que no pueden arrestarte, no pueden chantajearte."</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">AB</div>
+      <div><div class="name">Adam Back</div><div class="role">Criptógrafo · Cypherpunk</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Hashcash</span>
+      <span class="tag">Precursor de Bitcoin</span>
+    </div>
+    <p class="bio">Criptógrafo y autor de Hashcash — sistema de prueba de trabajo que se convirtió en precursor técnico directo de Bitcoin. Activo en la lista de correo Cypherpunk. Su filosofía encarnó el espíritu más puro del movimiento: no pidas permiso a los reguladores, arréglalo con código. Consideró el dinero electrónico como "el santo grial" porque completaba el panorama de la libertad digital.</p>
+    <div class="quote"><p>"No le pides al regulador más privacidad en línea. Lo arreglas."</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">RH</div>
+      <div><div class="name">Robert Hettinga</div><div class="role">Escritor · Criptógrafo financiero</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Mercado geodésico</span>
+      <span class="tag">IBUC</span>
+      <span class="tag">Criptografía financiera</span>
+    </div>
+    <p class="bio">Escritor técnico enfocado en criptografía financiera. Muy activo en la lista de correo Cypherpunk. Fundó la Internet Bearer Underwriting Corporation (IBUC) y cofundó la primera conferencia mundial de criptografía financiera (FC97) en Anguila. En su ensayo <em>The Geodesic Market</em> (1998) describió cómo redes descentralizadas tipo cúpula geodésica liberarían la economía del control político.</p>
+    <div class="quote"><p>"La economía ya no será la sirvienta de la política, y los Estados Nación serán tan ceremoniales como los monarcas constitucionales modernos."</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">JM</div>
+      <div><div class="name">Jim McCoy</div><div class="role">Desarrollador · Cypherpunk temprano</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Mojo Nation</span>
+      <span class="tag">Identidad descentralizada</span>
+    </div>
+    <p class="bio">Cofundador de Mojo Nation, la red peer-to-peer donde trabajaron Zooko Wilcox y Bram Cohen (futuro inventor de BitTorrent). Trabajó en uno de los problemas más difíciles de la descentralización: cómo replicar sin autoridad central lo que el gobierno logra con documentos de identidad — la confianza entre desconocidos.</p>
+    <div class="quote"><p>"La idea de formas en que las personas podrían proporcionar el equivalente de lo que hace el gobierno, de manera descentralizada."</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">ZW</div>
+      <div><div class="name">Zooko Wilcox</div><div class="role">Científico informático · Cypherpunk temprano</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Muro de Berlín</span>
+      <span class="tag">Libertad económica</span>
+      <span class="tag">Mojo Nation</span>
+    </div>
+    <p class="bio">Tenía 15 años cuando cayó el Muro de Berlín en 1989. Conectó ese momento con el potencial de internet: si las fronteras políticas podían caer, las digitales también. Inspirado por David Chaum, creyó que la criptografía traería libertad económica. Trabajó en Mojo Nation y más tarde fundaría Zcash.</p>
+    <div class="quote"><p>"Encontré mi tribu, y entre ese clan estaba la lista de correo de los Cypherpunks."</p></div>
+  </div>
+
+</div>
+
+<!-- ═══ HAYEKIANOS ═══ -->
+<div class="divider"></div>
+<div class="faction-header">
+  <div class="faction-dot"></div>
+  <div class="faction-name">Hayekianos de alta tecnología</div>
+</div>
+<div class="faction-desc">Término acuñado por Don Lavoie (George Mason University, 1990)</div>
+<div class="faction-lore">
+  Cuando el economista Don Lavoie visitó Silicon Valley y conoció a este grupo, quedó asombrado: <em>"La comprensión que estos ingenieros de software exhibían de Hayek me pareció mucho más sofisticada que la de la mayoría de los economistas."</em> Su concepto central era <strong>"agórico"</strong> — del griego <em>ágora</em> (mercado). Los sistemas agóricos resolvían problemas de coordinación en software complejo usando los mismos principios que Hayek identificó en la economía: <strong>el orden emerge de la interacción de partes autónomas, no de la planificación central</strong>. Phil Salin fue quien introdujo a Miller y Drexler en los escritos de Hayek. Mientras los criptoanarquistas querían construir un mundo paralelo en el ciberespacio, los Hayekianos buscaban transformar el existente desde dentro. Creían que sistemas imperfectos podían mejorar la sociedad gradualmente — reduciendo costos de transacción, mejorando la coordinación humana, y erosionando poco a poco la capacidad del gobierno para invadir las libertades.
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">PS</div>
+      <div><div class="name">Phil Salin</div><div class="role">Economista · Emprendedor</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">AMIX</span>
+      <span class="tag">Hayek</span>
+    </div>
+    <p class="bio">Figura central de los Hayekianos. Fue quien presentó la economía de Hayek a Mark Miller y K. Eric Drexler, dando origen al movimiento. Antes dirigió una compañía privada de cohetes y criticó el gasto de la NASA ante el Congreso. Fundó AMIX (American Information Exchange), precursor conceptual de eBay y Amazon. Su ensayo <em>"Freedom of Speech in Software"</em> (1991) defendió el software como expresión protegida.</p>
+    <div class="quote"><p>"Este negocio es hacer posible un nuevo tipo de cosa: poder comprar y vender información en línea."</p></div>
+    <div class="dates">1950 – 1991</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">MM</div>
+      <div><div class="name">Mark S. Miller</div><div class="role">Científico informático</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Hayekiano</span>
+      <span class="tag">Clave pública</span>
+      <span class="tag">Agoric</span>
+    </div>
+    <p class="bio">Con 20 años, en 1977, leyó sobre la criptografía de clave pública en Scientific American y llamó a Ted Nelson en medio de la noche. Cuando la NSA amenazó con clasificar el paper del MIT, viajó a Cambridge, consiguió una copia y la distribuyó clandestinamente por todo EE.UU. Coautor de los papers seminales sobre "Agorics" que conectaron la economía de Hayek con la arquitectura de software.</p>
+    <div class="quote"><p>"Podemos prevenir el Ministerio de la Verdad."</p></div>
+    <div class="quote"><p>"Nuestro sueño era permitir el futuro de la libertad humana."</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">CM</div>
+      <div><div class="name">Chip Morningstar</div><div class="role">Ingeniero de software</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">AMIX</span>
+      <span class="tag">Habitat</span>
+      <span class="tag">Lucasfilm</span>
+    </div>
+    <p class="bio">Arquitecto jefe de AMIX. En Lucasfilm creó <em>Habitat</em> — una de las primeras comunidades virtuales en línea. Coescribió un ensayo argumentando que la planificación centralizada es imposible al construir mundos en software. Fue él quien presentó a Tim May con Phil Salin en diciembre de 1987, un encuentro que cambiaría la historia del movimiento.</p>
+    <div class="quote"><p>"Lo que no puedes hacer es decirle a la gente lo que quiere."</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">DT</div>
+      <div><div class="name">E. Dean Tribble</div><div class="role">Científico informático · Agoric</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Incremental</span>
+      <span class="tag">Pragmático</span>
+    </div>
+    <p class="bio">Miembro central de los Hayekianos según la clasificación original de Don Lavoie. Contrapeso a la visión radical de Tim May: creía en proporcionar herramientas que permitan actuar con mayor libertad, paso a paso, en lugar de construir un mundo paralelo. Consideró a May un "locutor de choque" útil para refinar ideas, pero definió el desarrollo responsable como anticipar consecuencias negativas.</p>
+    <div class="quote"><p>"Quiero vivir en el mundo que nos rodea en lugar de intentar construir uno desde cero."</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">GP</div>
+      <div><div class="name">Gayle Pergamit</div><div class="role">Socia y esposa de Phil Salin</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">AMIX</span>
+      <span class="tag">Economía austriaca</span>
+    </div>
+    <p class="bio">Esposa y socia de negocios de Phil Salin, parte integral del grupo Hayekiano. Articuló mejor que nadie la visión filosófica de AMIX: era una "instanciación de la economía austriaca puesta en código y en línea". Diagnosticó con precisión la diferencia entre May y Salin: "Son dos tipos diferentes de libertarios."</p>
+    <div class="quote"><p>"Estábamos sentando las bases filosóficas del comercio electrónico."</p></div>
+  </div>
+
+</div>
+
+<!-- ═══ CRIPTÓGRAFOS ═══ -->
+<div class="divider"></div>
+<div class="faction-header">
+  <div class="faction-dot"></div>
+  <div class="faction-name">Criptógrafos</div>
+</div>
+<div class="faction-desc">Los constructores de las armas matemáticas fundamentales</div>
+<div class="faction-lore">
+  Los armeros. Sin ellos, todo lo demás era teoría. En los años 70, la criptografía era un secreto militar — la NSA consideraba su publicación un acto de traición. Diffie y Hellman rompieron ese monopolio con la criptografía de clave pública: una fórmula matemática que cualquier persona podía usar para crear comunicaciones <strong>impenetrables</strong>, sin necesidad de compartir previamente una clave secreta. Una supercomputadora necesitaría 40 cuatrillones de años para descifrarla. Zimmermann tomó esa matemática y la puso en manos del pueblo con PGP — y pagó el precio: tres años bajo investigación criminal del gobierno de EE.UU. por "exportar armas". <strong>Diffie inventó el arma; Zimmermann la distribuyó.</strong> Los guerreros de Burma la usaron en laptops DOS en la selva para coordinar la resistencia contra su gobierno. La oposición de Letonia la usó para proteger sus comunicaciones. El cifrado dejó de ser teoría y se convirtió en herramienta de liberación.
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">WD</div>
+      <div><div class="name">Whitfield Diffie</div><div class="role">Criptógrafo · Premio Turing</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Clave pública</span>
+      <span class="tag">Stanford</span>
+    </div>
+    <p class="bio">Co-inventor de la criptografía de clave pública — el avance que hizo posible la comunicación privada en internet. Su trabajo con Martin Hellman, publicado en 1976 y difundido por Scientific American en 1977, revolucionó el campo. Ganador del Premio Turing. Su analogía del buzón es la mejor explicación jamás dada de la criptografía asimétrica.</p>
+    <div class="quote"><p>"Considere un buzón: cualquiera puede tirar una carta, pero solo el cartero tiene la llave."</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="av">PZ</div>
+      <div><div class="name">Phil Zimmermann</div><div class="role">Desarrollador de software</div></div>
+    </div>
+    <div class="tags">
+      <span class="tag">PGP</span>
+      <span class="tag">Investigado 3 años</span>
+    </div>
+    <p class="bio">Creador de PGP (Pretty Good Privacy) en 1991 — el primer sistema de cifrado fuerte accesible al público. Cuando el software llegó al extranjero, el Departamento de Justicia lo investigó criminalmente durante 3 años por supuesta "exportación de armas". Los cargos fueron retirados en 1996. Convenció al MIT de imprimir el código fuente como libro para demostrar que el código era expresión protegida.</p>
+    <div class="quote"><p>"La gente lo está usando en lugares donde hay gobiernos opresivos."</p></div>
+  </div>
+
+</div>
+
+</main>
+
+<footer class="footer">
+  <p>
+    Perfiles basados en el documental <em>"Cypherpunks Write Code"</em> de Reason TV.<br>
+    Clasificación verificada con el paper original de Don Lavoie,
+    <em>"High-Tech Hayekians"</em> (Market Process, 1990).
+  </p>
+  <div class="book-rec">
+    Lectura recomendada: <strong>"The Rise of the Computer State"</strong> — David Burnham, 1983
+  </div>
+</footer>
+
+</body>
+</html>
