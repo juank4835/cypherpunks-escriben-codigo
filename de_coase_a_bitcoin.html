@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Por qué Bitcoin podría ser la moneda de la IA</title>
+<title>Por qué la IA va a reorganizar las empresas</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--black:#000;--surface:#0c0c0c;--orange:#f7931a;--orange-dim:rgba(247,147,26,0.08);--orange-border:rgba(247,147,26,0.18);--orange-glow:rgba(247,147,26,0.12);--red:#e05252;--red-dim:rgba(224,82,82,0.08);--red-border:rgba(224,82,82,0.2);--amber:#e89b3e;--purple:#7c5cbf;--white:#e8e8e8;--g1:#b0b0b0;--g2:#777;--g3:#444;--g4:#222;--serif:'Playfair Display',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace}
@@ -162,14 +162,126 @@ body{background:var(--black);color:var(--white);font-family:var(--sans);font-siz
 <!-- ══════ HERO ══════ -->
 <header class="hero" id="sec-hero">
   <div class="hero-inner">
-    <p class="hero-ey">Una tesis de inversión desde la teoría de Coase</p>
+    <p class="hero-ey">Los costos de transacción de Coase en la era de la IA</p>
+    <h1>Por qué la IA va a<br>reorganizar las <em>empresas</em></h1>
     <p style="font-family:var(--sans);font-size:.85rem;color:var(--g2);margin-top:1.5rem;letter-spacing:.05em">Por Juan Camilo Álvarez</p>
-    <h1>Por qué Bitcoin podría ser<br>la moneda de la <em>IA</em></h1>
-    <p class="hero-desc">Para entender por qué Bitcoin podría convertirse en la moneda nativa de la inteligencia artificial, primero hay que entender por qué existen las empresas.</p>
+    <p class="hero-desc">En 1937, Ronald Coase explicó por qué existen las empresas. En 2026, la inteligencia artificial está a punto de reescribir esa respuesta.</p>
     <div class="hero-meta"><span>Basado en Ronald H. Coase</span><span class="dot"></span><span><em>The Nature of the Firm</em></span><span class="dot"></span><span>1937</span></div>
   </div>
   <div class="scroll-ind"><span>Scroll</span><div class="scroll-line"></div></div>
 </header>
+
+<!-- ══════ SECTION 0: DEFINICIONES ══════ -->
+<div class="sep"></div>
+<div class="sec-title" id="sec-s0"><p class="sec-ey"><span>Prólogo</span></p><h2>Dos costos<br><em>invisibles</em></h2></div>
+
+<section class="prose" id="sec-definitions">
+  <div class="container">
+    <p class="ey">Los conceptos fundamentales</p>
+    <h3>Toda actividad económica tiene dos fricciones</h3>
+    <p>En 1937, el economista Ronald Coase identificó dos fuerzas opuestas que determinan cómo se organiza la economía. Entenderlas es entender por qué existen las empresas — y por qué la inteligencia artificial está a punto de transformarlas.</p>
+  </div>
+</section>
+
+<section class="comp-section" id="sec-two-costs">
+  <div class="wide">
+    <svg width="100%" viewBox="0 0 700 280" style="max-width:750px">
+      <!-- MERCADO header -->
+      <text x="175" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#f7931a" font-family="Inter,sans-serif" letter-spacing=".15em">MERCADO</text>
+
+      <!-- Costo de transacción -->
+      <rect x="20" y="32" width="310" height="200" rx="10" fill="none" stroke="#f7931a" stroke-width="1" opacity=".3"/>
+      <text x="175" y="62" text-anchor="middle" font-size="14" font-weight="700" fill="#f7931a" font-family="Inter,sans-serif">Costos de transacción</text>
+      <text x="175" y="80" text-anchor="middle" font-size="10" fill="#e8e8e8" opacity=".4" font-family="Inter,sans-serif">La fricción de usar el mercado</text>
+
+      <line x1="50" y1="95" x2="300" y2="95" stroke="#e8e8e8" stroke-width="0.3" opacity=".1"/>
+
+      <circle cx="55" cy="118" r="5" fill="none" stroke="#e89b3e" stroke-width="1.5"/>
+      <line x1="59" y1="122" x2="63" y2="126" stroke="#e89b3e" stroke-width="1.5"/>
+      <text x="75" y="116" font-size="11" font-weight="500" fill="#e89b3e" font-family="Inter,sans-serif">Búsqueda</text>
+      <text x="75" y="131" font-size="9" fill="#e8e8e8" opacity=".4" font-family="Inter,sans-serif">¿Quién vende? ¿A qué precio? ¿Es confiable?</text>
+
+      <svg x="42" y="146" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b9ed6" stroke-width="2"><rect x="4" y="6" width="16" height="12" rx="2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+      <text x="75" y="156" font-size="11" font-weight="500" fill="#3b9ed6" font-family="Inter,sans-serif">Negociación</text>
+      <text x="75" y="171" font-size="9" fill="#e8e8e8" opacity=".4" font-family="Inter,sans-serif">Acordar precio, condiciones, garantía, plazos</text>
+
+      <svg x="42" y="184" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c5cbf" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12c2-4 5.5-8 10-8s8 4 10 8c-2 4-5.5 8-10 8s-8-4-10-8z"/></svg>
+      <text x="75" y="194" font-size="11" font-weight="500" fill="#7c5cbf" font-family="Inter,sans-serif">Vigilancia</text>
+      <text x="75" y="209" font-size="9" fill="#e8e8e8" opacity=".4" font-family="Inter,sans-serif">¿Entregaron lo prometido? ¿Qué hago si fallan?</text>
+
+      <!-- EMPRESA header -->
+      <text x="525" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#40c4ff" font-family="Inter,sans-serif" letter-spacing=".15em">EMPRESA</text>
+
+      <!-- Costo de coordinación -->
+      <rect x="370" y="32" width="310" height="200" rx="10" fill="none" stroke="#40c4ff" stroke-width="1" opacity=".3"/>
+      <text x="525" y="62" text-anchor="middle" font-size="14" font-weight="700" fill="#40c4ff" font-family="Inter,sans-serif">Costos de coordinación</text>
+      <text x="525" y="80" text-anchor="middle" font-size="10" fill="#e8e8e8" opacity=".4" font-family="Inter,sans-serif">La fricción de organizar internamente</text>
+
+      <line x1="400" y1="95" x2="650" y2="95" stroke="#e8e8e8" stroke-width="0.3" opacity=".1"/>
+
+      <text x="425" y="118" font-size="11" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Capas de aprobaciones y procesos</text>
+      <text x="425" y="144" font-size="11" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Decisiones lentas a gran escala</text>
+      <text x="425" y="170" font-size="11" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Información que se pierde entre áreas</text>
+      <text x="425" y="196" font-size="11" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Errores que se multiplican con el tamaño</text>
+
+      <!-- Conclusión -->
+      <text x="350" y="258" text-anchor="middle" font-size="12" font-style="italic" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">La empresa existe como solución al primero. Pero al hacerlo, crea el segundo.</text>
+      <text x="350" y="276" text-anchor="middle" font-size="11" font-style="italic" fill="#f7931a" font-family="Inter,sans-serif">Toda la economía es un equilibrio entre estas dos fuerzas.</text>
+    </svg>
+  </div>
+</section>
+
+<section class="prose" id="sec-compensation">
+  <div class="container">
+    <p>Lo fundamental es entender que estos dos costos <strong>se compensan.</strong> Si quieres reducir uno, incrementas el otro. Antes de la IA, no había forma de escapar de esta trampa.</p>
+  </div>
+</section>
+
+<section class="comp-section" id="sec-seesaw" style="padding-top:0">
+  <div class="wide">
+    <div style="display:flex;gap:8px;margin-bottom:1.5rem;flex-wrap:wrap">
+      <button class="ia-btn active" id="ssB0" onclick="setSS(0)">Solo mercado</button>
+      <button class="ia-btn" id="ssB1" onclick="setSS(1)">Crear empresa</button>
+      <button class="ia-btn" id="ssB2" onclick="setSS(2)">Empresa grande</button>
+    </div>
+    <div style="max-width:560px;margin:0 auto">
+      <div style="display:flex;gap:24px;align-items:flex-end;height:280px;justify-content:center">
+        <div style="display:flex;flex-direction:column;align-items:center;width:180px">
+          <div style="font-size:14px;font-weight:500;color:#f7931a;margin-bottom:4px">Mercado</div>
+          <div style="font-size:11px;color:var(--g2);margin-bottom:12px">Costos de transacción</div>
+          <div id="ssTV" style="font-size:18px;font-weight:500;color:#f7931a;margin-bottom:6px;transition:all .4s">Alto</div>
+          <div style="width:100%;height:200px;display:flex;flex-direction:column;justify-content:flex-end">
+            <div id="ssTB" style="width:100%;background:#f7931a;border-radius:8px 8px 0 0;height:85%;transition:height .8s ease-in-out"></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;width:40px;padding-bottom:60px">
+          <svg width="36" height="20" viewBox="0 0 36 20" id="ssArr" style="transition:transform .8s ease">
+            <line x1="2" y1="10" x2="30" y2="10" stroke="var(--g3)" stroke-width="1.5"/>
+            <polyline points="24,4 31,10 24,16" fill="none" stroke="var(--g3)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;width:180px">
+          <div style="font-size:14px;font-weight:500;color:#40c4ff;margin-bottom:4px">Empresa</div>
+          <div style="font-size:11px;color:var(--g2);margin-bottom:12px">Costos de coordinación</div>
+          <div id="ssCV" style="font-size:18px;font-weight:500;color:#40c4ff;margin-bottom:6px;transition:all .4s">—</div>
+          <div style="width:100%;height:200px;display:flex;flex-direction:column;justify-content:flex-end">
+            <div id="ssCB" style="width:100%;background:#40c4ff;border-radius:8px 8px 0 0;height:5%;transition:height .8s ease-in-out"></div>
+          </div>
+        </div>
+      </div>
+      <div id="ssIns" style="margin-top:1.5rem;padding:12px 16px;border-radius:8px;background:var(--surface);border:1px solid var(--g4);font-size:.85rem;color:var(--g1);text-align:center;line-height:1.5">Sin empresa, toda la fricción está en el mercado. Tú pagas buscar, negociar y vigilar.</div>
+    </div>
+  </div>
+</section>
+
+<section class="prose" id="sec-bridge-to-s1">
+  <div class="container">
+    <p>Cuando los costos de transacción son altos, conviene crear una empresa que los absorba. Cuando los costos de coordinación crecen demasiado, conviene volver al mercado. El tamaño de cada empresa en el mundo es el resultado de este equilibrio.</p>
+    <p>Para entender esto, vamos a usar un ejemplo que todos conocen.</p>
+  </div>
+</section>
+
+<div class="footer-space" style="height:2rem"></div>
 
 <!-- ══════ SECTION 1 ══════ -->
 <div class="sep"></div>
@@ -664,241 +776,26 @@ body{background:var(--black);color:var(--white);font-family:var(--sans);font-siz
       <text id="iaIns" x="400" y="465" text-anchor="middle" font-size="14" font-style="italic" fill="#f7931a" font-family="Inter,sans-serif">¿Qué pasa si una tecnología mueve este punto?</text>
     </svg>
 
+
     <div class="answer-box" style="margin-top:2rem">
       <div class="answer-tag">La consecuencia</div>
-      <p>Si la IA puede buscar, negociar y verificar a costo cero, el mercado se vuelve más eficiente que la empresa para casi todo. Las empresas se achican. Los agentes autónomos coordinan directamente en el mercado. Pero hay un problema: la IA puede hacer todo eso — excepto mover dinero. Para eso, necesita algo que el sistema financiero actual no le puede dar.</p>
+      <p>Si la IA puede buscar, negociar y verificar a costo casi cero, el mercado se vuelve más eficiente que la empresa para casi todo. Las empresas como las conocemos — grandes, verticales, burocráticas — van a encogerse. Los agentes autónomos van a coordinar directamente en el mercado. Las organizaciones van a ser más pequeñas, más especializadas, más fluidas.</p>
+      <p>Coase explicó en 1937 por qué las empresas crecieron. La IA explica en 2026 por qué van a achicarse.</p>
     </div>
   </div>
 </section>
 
-<div class="footer-space" style="height:2rem"></div>
-
-<!-- ══════ SECTION 6 ══════ -->
-<div class="sep"></div>
-<div class="sec-title" id="sec-s6"><p class="sec-ey"><span>Sección 6</span></p><h2>El último costo<br>de <em>transacción</em></h2></div>
-
-<!-- PARTE 1: LA HISTORIA -->
-<section class="prose" id="sec-bitcoin">
+<!-- ══════ CIERRE ══════ -->
+<section class="prose" id="sec-cierre">
   <div class="container">
-    <p class="ey">El viaje de un pago</p>
-    <h3>30 segundos de magia. 5 días de fricción.</h3>
-    <p>Volvamos al clon. Pero esta vez, ponemos un agente de IA a cargo de todo.</p>
-    <p>En 30 segundos, tu agente buscó las 8 piezas perfectas entre miles de proveedores globales. Comparó precios, verificó especificaciones, evaluó reputaciones, negoció condiciones. Los tres costos de transacción de Coase — buscar, negociar y vigilar — desaparecieron. La IA hizo en medio minuto lo que a ti te tomó 15 horas.</p>
-    <p><strong>Ahora necesita pagar.</strong></p>
+    <h3 style="color:#f7931a">Lo que viene</h3>
+    <p>Estamos en el inicio de la mayor reorganización de la actividad económica desde la revolución industrial. La IA no es solo una herramienta de productividad — es una fuerza que redibuja los límites entre lo que hacemos dentro de las empresas y lo que hacemos en el mercado.</p>
+    <p>Coase nos dio el mapa. La IA lo está redibujando. Y las preguntas que siguen son enormes: si el mercado se vuelve más eficiente que la empresa, ¿qué pasa con el empleo? ¿Con la estructura corporativa? ¿Con el dinero que mueve esas transacciones?</p>
+    <p>Esas preguntas merecen su propio artículo. Esto fue solo el mapa.</p>
 
-    <p style="margin-top:2rem;color:var(--g2);font-size:.85rem;font-style:italic">Lo que sigue es lo que pasa hoy — no ficción, no especulación.</p>
-
-    <h3 style="margin-top:2.5rem">Intento 1: abrir una cuenta bancaria</h3>
-    <p>El agente intenta abrir una cuenta para enviar los pagos. El banco le pide un pasaporte. Una dirección física. Una nacionalidad. Una firma. Prueba de ingresos. Un formulario KYC.</p>
-    <p>El agente no tiene ninguna de esas cosas. <strong>No puede entrar al sistema financiero.</strong> No porque sea ilegal — sino porque el sistema fue diseñado en el siglo XX para humanos con cédula en mano.</p>
-    <p>Resultado: necesita buscar un intermediario humano que pague por él. La misma fricción de búsqueda que Coase describió. El primer costo reaparece.</p>
-
-    <h3 style="margin-top:2.5rem">Intento 2: pagar el procesador en Shenzhen</h3>
-    <p>El agente encontró el procesador perfecto: $180, Shenzhen, China. Verificado. Negociado. Listo.</p>
-    <p>Pero el dólar tiene dueño. Y el dueño acaba de imponer aranceles del 45% a semiconductores chinos. El procesador de $180 ahora cuesta $261. O peor: el fabricante fue sancionado directamente y <strong>ningún banco en el mundo puede procesar el pago.</strong></p>
-    <p>No importa que sea el mejor procesador al mejor precio. No importa que la IA haya hecho un trabajo perfecto. El dinero tiene bandera — y esa bandera acaba de bloquear la transacción.</p>
-    <p>Resultado: el agente tiene que renegociar todo desde cero. Buscar otro proveedor en Corea o Vietnam. Nuevos precios, nuevas condiciones, nuevos plazos. La fricción de negociación reaparece completa.</p>
-
-    <h3 style="margin-top:2.5rem">Intento 3: enviar 8 pagos internacionales</h3>
-    <p>Después de recalcular, el agente tiene 8 proveedores confirmados en 5 países: Corea, Japón, Alemania, Estados Unidos y Vietnam. Los 8 dijeron sí al mismo tiempo — la IA coordinó todo en paralelo.</p>
-    <p>Envía los pagos. Y espera.</p>
-    <p>Día 1: los pagos salen de tu banco. Día 2: el pago a Alemania está en cola — es sábado y el banco está cerrado. Día 3: el pago a Corea fue retenido por compliance para "revisión adicional." Día 4: el pago a Japón llegó pero con un spread cambiario del 3.5% — el proveedor recibió menos de lo acordado y pide la diferencia. Día 5: finalmente llegan todos. Excepto el de Vietnam, que fue rechazado porque el banco corresponsal no tiene relación con ese banco local.</p>
-    <p><strong>La IA opera a velocidad del siglo XXI. El dinero se mueve a velocidad del siglo XX.</strong></p>
-    <p>Resultado: el agente tiene que rastrear 8 transferencias en 5 zonas horarias. Verificar cuáles llegaron. Resolver el rechazo de Vietnam. Renegociar el spread con Japón. La fricción de vigilancia reaparece — multiplicada por 8.</p>
-
-    <h3 style="margin-top:2.5rem">El recibo final</h3>
-    <p>Cuando todo llega, el agente hace las cuentas:</p>
-
-    <svg width="100%" viewBox="0 0 600 320" style="max-width:750px;margin-top:1rem">
-      <rect x="50" y="10" width="500" height="300" rx="10" fill="none" stroke="#e05252" stroke-width="1" opacity=".4"/>
-      <text x="300" y="42" text-anchor="middle" font-size="11" font-weight="600" fill="#e05252" opacity=".7" font-family="var(--mono)" letter-spacing=".15em">RECIBO DEL CLON — IA + DINERO FIAT</text>
-      <line x1="80" y1="55" x2="520" y2="55" stroke="#e8e8e8" stroke-width="0.3" opacity=".15"/>
-
-      <text x="90" y="80" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">8 piezas (precio de mercado)</text>
-      <text x="490" y="80" text-anchor="end" font-size="10" fill="#2ecc71" font-family="Inter,sans-serif">$1,000</text>
-
-      <text x="90" y="105" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Búsqueda, negociación, verificación (IA)</text>
-      <text x="490" y="105" text-anchor="end" font-size="10" fill="#2ecc71" font-family="Inter,sans-serif">$0</text>
-      <text x="500" y="105" font-size="9" fill="#2ecc71" opacity=".5" font-family="Inter,sans-serif">✓</text>
-
-      <line x1="80" y1="120" x2="520" y2="120" stroke="#e05252" stroke-width="0.3" opacity=".2" stroke-dasharray="3 3"/>
-      <text x="300" y="138" text-anchor="middle" font-size="9" fill="#e05252" opacity=".5" font-family="Inter,sans-serif">— Costos reintroducidos por el dinero fiat —</text>
-
-      <text x="90" y="162" font-size="10" fill="#e05252" opacity=".7" font-family="Inter,sans-serif">Comisiones bancarias (×8 transferencias)</text>
-      <text x="490" y="162" text-anchor="end" font-size="10" fill="#e05252" font-family="Inter,sans-serif">+$280</text>
-
-      <text x="90" y="185" font-size="10" fill="#e05252" opacity=".7" font-family="Inter,sans-serif">Spread cambiario (2-4% × 5 monedas)</text>
-      <text x="490" y="185" text-anchor="end" font-size="10" fill="#e05252" font-family="Inter,sans-serif">+$85</text>
-
-      <text x="90" y="208" font-size="10" fill="#e05252" opacity=".7" font-family="Inter,sans-serif">Sobrecosto por arancel (procesador alternativo)</text>
-      <text x="490" y="208" text-anchor="end" font-size="10" fill="#e05252" font-family="Inter,sans-serif">+$45</text>
-
-      <text x="90" y="231" font-size="10" fill="#e05252" opacity=".7" font-family="Inter,sans-serif">Intermediario humano (para abrir cuentas)</text>
-      <text x="490" y="231" text-anchor="end" font-size="10" fill="#e05252" font-family="Inter,sans-serif">+$50</text>
-
-      <text x="90" y="254" font-size="10" fill="#e05252" opacity=".7" font-family="Inter,sans-serif">Tiempo perdido: 5 días de espera</text>
-      <text x="490" y="254" text-anchor="end" font-size="10" fill="#e05252" opacity=".5" font-family="Inter,sans-serif">no cuantificable</text>
-
-      <line x1="80" y1="268" x2="520" y2="268" stroke="#e8e8e8" stroke-width="0.5" opacity=".2"/>
-      <text x="90" y="290" font-size="12" font-weight="600" fill="#e8e8e8" font-family="Inter,sans-serif">TOTAL</text>
-      <text x="490" y="290" text-anchor="end" font-size="14" font-weight="700" fill="#e05252" font-family="Inter,sans-serif">~$1,460</text>
-    </svg>
-  </div>
-</section>
-
-<section class="comp-section" id="sec-3costs-return" style="padding-top:0">
-  <div class="wide">
-    <p style="color:var(--g1);margin-bottom:1.5rem;font-size:.95rem">¿Ves lo que pasó? La IA eliminó los tres costos de Coase en 30 segundos. Pero el dinero fiat <strong style="color:#e8e8e8">los reintrodujo todos.</strong></p>
-  </div>
-  <div class="wide">
-    <svg width="100%" viewBox="0 0 700 300" style="max-width:800px">
-      <!-- Título -->
-      <text x="350" y="25" text-anchor="middle" font-size="13" font-weight="600" fill="#e8e8e8" font-family="Inter,sans-serif">Los tres costos de Coase</text>
-
-      <!-- Headers -->
-      <text x="170" y="60" text-anchor="middle" font-size="11" font-weight="600" fill="#2ecc71" font-family="Inter,sans-serif">La IA los eliminó</text>
-      <text x="530" y="60" text-anchor="middle" font-size="11" font-weight="600" fill="#e05252" font-family="Inter,sans-serif">El dinero fiat los reintroduce</text>
-
-      <!-- Línea divisoria central -->
-      <line x1="350" y1="70" x2="350" y2="260" stroke="#e8e8e8" stroke-width="0.5" opacity=".1"/>
-
-      <!-- BÚSQUEDA -->
-      <circle cx="50" cy="100" r="7" fill="none" stroke="#e89b3e" stroke-width="1.5"/>
-      <line x1="55" y1="105" x2="62" y2="112" stroke="#e89b3e" stroke-width="1.5"/>
-      <text x="80" y="100" font-size="10" font-weight="600" fill="#e89b3e" font-family="Inter,sans-serif">Búsqueda</text>
-      <text x="80" y="115" font-size="9" fill="#2ecc71" opacity=".7" font-family="Inter,sans-serif">Eliminado en 30 seg ✓</text>
-      <text x="380" y="100" font-size="10" fill="#e05252" opacity=".8" font-family="Inter,sans-serif">Buscar intermediario que pague</text>
-      <text x="380" y="115" font-size="9" fill="#e05252" opacity=".5" font-family="Inter,sans-serif">Buscar banco que acepte la operación</text>
-
-      <line x1="50" y1="135" x2="650" y2="135" stroke="#e8e8e8" stroke-width="0.3" opacity=".1"/>
-
-      <!-- NEGOCIACIÓN -->
-      <svg x="38" y="150" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b9ed6" stroke-width="1.8"><rect x="4" y="6" width="16" height="12" rx="2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-      <text x="80" y="162" font-size="10" font-weight="600" fill="#3b9ed6" font-family="Inter,sans-serif">Negociación</text>
-      <text x="80" y="177" font-size="9" fill="#2ecc71" opacity=".7" font-family="Inter,sans-serif">8 contratos en paralelo ✓</text>
-      <text x="380" y="162" font-size="10" fill="#e05252" opacity=".8" font-family="Inter,sans-serif">Renegociar por aranceles y sanciones</text>
-      <text x="380" y="177" font-size="9" fill="#e05252" opacity=".5" font-family="Inter,sans-serif">Negociar spreads y comisiones bancarias</text>
-
-      <line x1="50" y1="197" x2="650" y2="197" stroke="#e8e8e8" stroke-width="0.3" opacity=".1"/>
-
-      <!-- VIGILANCIA -->
-      <svg x="38" y="210" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c5cbf" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M2 12c2-4 5.5-8 10-8s8 4 10 8c-2 4-5.5 8-10 8s-8-4-10-8z"/></svg>
-      <text x="80" y="222" font-size="10" font-weight="600" fill="#7c5cbf" font-family="Inter,sans-serif">Vigilancia</text>
-      <text x="80" y="237" font-size="9" fill="#2ecc71" opacity=".7" font-family="Inter,sans-serif">Verificación automática ✓</text>
-      <text x="380" y="222" font-size="10" fill="#e05252" opacity=".8" font-family="Inter,sans-serif">Rastrear 8 transferencias en 5 países</text>
-      <text x="380" y="237" font-size="9" fill="#e05252" opacity=".5" font-family="Inter,sans-serif">Resolver rechazos, confirmar montos, disputas</text>
-
-      <!-- Flechas de reintroducción -->
-      <text x="340" y="105" text-anchor="end" font-size="14" fill="#2ecc71">✓</text>
-      <text x="360" y="105" font-size="14" fill="#e05252">✗</text>
-      <text x="340" y="167" text-anchor="end" font-size="14" fill="#2ecc71">✓</text>
-      <text x="360" y="167" font-size="14" fill="#e05252">✗</text>
-      <text x="340" y="227" text-anchor="end" font-size="14" fill="#2ecc71">✓</text>
-      <text x="360" y="227" font-size="14" fill="#e05252">✗</text>
-
-      <!-- Conclusión -->
-      <rect x="100" y="262" width="500" height="30" rx="6" fill="#f7931a" opacity=".06"/>
-      <text x="350" y="282" text-anchor="middle" font-size="11" font-style="italic" fill="#f7931a" font-family="Inter,sans-serif">El dinero fiat es el último costo de transacción. Reintroduce los tres.</text>
-    </svg>
-  </div>
-</section>
-
-<section class="comp-section" id="sec-vs" style="padding-top:0">
-  <div class="wide">
-    <div class="quote-block" style="margin-bottom:2rem">
-      <p>¿Y si existiera un dinero que no reintrodujera ninguno de estos costos?</p>
-      <cite>La pregunta que Coase no pudo hacer en 1937</cite>
-    </div>
-  </div>
-  <div class="wide">
-    <h3 style="font-family:var(--serif);font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:700;margin-bottom:2rem;text-align:center">El mismo clon. El mismo agente. Diferente dinero.</h3>
-
-    <svg width="100%" viewBox="0 0 700 340" style="max-width:800px">
-      <!-- Columna FIAT -->
-      <rect x="30" y="10" width="300" height="290" rx="10" fill="none" stroke="#e05252" stroke-width="0.8" opacity=".3"/>
-      <text x="180" y="40" text-anchor="middle" font-size="13" font-weight="600" fill="#e05252" font-family="Inter,sans-serif">IA + Dinero Fiat</text>
-
-      <text x="60" y="75" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Búsqueda de piezas</text>
-      <text x="300" y="75" text-anchor="end" font-size="10" fill="#2ecc71" font-family="Inter,sans-serif">30 seg ✓</text>
-
-      <text x="60" y="100" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Pagar</text>
-      <text x="300" y="100" text-anchor="end" font-size="10" fill="#e05252" font-family="Inter,sans-serif">5 días ✗</text>
-
-      <text x="60" y="125" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Comisiones</text>
-      <text x="300" y="125" text-anchor="end" font-size="10" fill="#e05252" font-family="Inter,sans-serif">~$460 ✗</text>
-
-      <text x="60" y="150" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Necesita identidad</text>
-      <text x="300" y="150" text-anchor="end" font-size="10" fill="#e05252" font-family="Inter,sans-serif">Sí ✗</text>
-
-      <text x="60" y="175" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Censurable</text>
-      <text x="300" y="175" text-anchor="end" font-size="10" fill="#e05252" font-family="Inter,sans-serif">Sí ✗</text>
-
-      <text x="60" y="200" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Horario</text>
-      <text x="300" y="200" text-anchor="end" font-size="10" fill="#e05252" font-family="Inter,sans-serif">Lun-Vie ✗</text>
-
-      <text x="60" y="225" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Intermediarios</text>
-      <text x="300" y="225" text-anchor="end" font-size="10" fill="#e05252" font-family="Inter,sans-serif">4-6 por pago ✗</text>
-
-      <line x1="50" y1="245" x2="310" y2="245" stroke="#e8e8e8" stroke-width="0.3" opacity=".15"/>
-      <text x="60" y="270" font-size="11" font-weight="600" fill="#e8e8e8" font-family="Inter,sans-serif">Total</text>
-      <text x="300" y="270" text-anchor="end" font-size="13" font-weight="700" fill="#e05252" font-family="Inter,sans-serif">~$1,460 · 5 días</text>
-
-      <!-- Columna BITCOIN -->
-      <rect x="370" y="10" width="300" height="290" rx="10" fill="none" stroke="#2ecc71" stroke-width="0.8" opacity=".3"/>
-      <text x="520" y="40" text-anchor="middle" font-size="13" font-weight="600" fill="#2ecc71" font-family="Inter,sans-serif">IA + Bitcoin</text>
-
-      <text x="400" y="75" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Búsqueda de piezas</text>
-      <text x="640" y="75" text-anchor="end" font-size="10" fill="#2ecc71" font-family="Inter,sans-serif">30 seg ✓</text>
-
-      <text x="400" y="100" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Pagar</text>
-      <text x="640" y="100" text-anchor="end" font-size="10" fill="#2ecc71" font-family="Inter,sans-serif">~10 min ✓</text>
-
-      <text x="400" y="125" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Comisiones</text>
-      <text x="640" y="125" text-anchor="end" font-size="10" fill="#2ecc71" font-family="Inter,sans-serif">~$2 ✓</text>
-
-      <text x="400" y="150" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Necesita identidad</text>
-      <text x="640" y="150" text-anchor="end" font-size="10" fill="#2ecc71" font-family="Inter,sans-serif">No ✓</text>
-
-      <text x="400" y="175" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Censurable</text>
-      <text x="640" y="175" text-anchor="end" font-size="10" fill="#2ecc71" font-family="Inter,sans-serif">No ✓</text>
-
-      <text x="400" y="200" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Horario</text>
-      <text x="640" y="200" text-anchor="end" font-size="10" fill="#2ecc71" font-family="Inter,sans-serif">24/7 ✓</text>
-
-      <text x="400" y="225" font-size="10" fill="#e8e8e8" opacity=".5" font-family="Inter,sans-serif">Intermediarios</text>
-      <text x="640" y="225" text-anchor="end" font-size="10" fill="#2ecc71" font-family="Inter,sans-serif">0 ✓</text>
-
-      <line x1="390" y1="245" x2="650" y2="245" stroke="#e8e8e8" stroke-width="0.3" opacity=".15"/>
-      <text x="400" y="270" font-size="11" font-weight="600" fill="#e8e8e8" font-family="Inter,sans-serif">Total</text>
-      <text x="640" y="270" text-anchor="end" font-size="13" font-weight="700" fill="#2ecc71" font-family="Inter,sans-serif">~$1,002 · 11 min</text>
-
-      <!-- VS central -->
-      <text x="350" y="160" text-anchor="middle" font-size="16" font-weight="700" fill="#e8e8e8" opacity=".15" font-family="Inter,sans-serif">vs</text>
-
-      <!-- Conclusión -->
-      <text x="350" y="330" text-anchor="middle" font-size="12" font-style="italic" fill="#f7931a" font-family="Inter,sans-serif">Mismo clon. Mismo agente. $458 menos. 5 días antes. Cero fricción.</text>
-    </svg>
-  </div>
-</section>
-
-<!-- CIERRE: BITCOIN -->
-<section class="prose" id="sec-btc-close">
-  <div class="container">
-    <p>El contraste no necesita explicación. Con Bitcoin, el agente de IA envía 8 pagos a 5 países con 8 líneas de código. Sin pasaporte, sin banco, sin permiso, sin arancel, sin fin de semana. Los 8 proveedores reciben el pago completo en minutos. Sin spread, sin comisiones ocultas, sin intermediarios.</p>
-    <p><strong>Bitcoin no es una opinión sobre el futuro del dinero. Es la infraestructura que la IA necesita para funcionar.</strong></p>
-
-    <div style="text-align:center;margin-top:3rem">
-      <svg width="90" height="90" viewBox="0 0 90 90">
-        <circle cx="45" cy="45" r="42" fill="none" stroke="#f7931a" stroke-width="2"/>
-        <text x="45" y="58" text-anchor="middle" font-size="36" font-weight="700" fill="#f7931a" font-family="Inter,sans-serif">₿</text>
-      </svg>
-      <p style="font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;margin-top:1rem;color:#f7931a">Bitcoin</p>
-      <p style="color:var(--g1);font-size:.95rem;max-width:520px;margin:0.5rem auto 0">Dinero programable. Sin permiso. Neutral. Nativo de internet.<br>La moneda que la IA necesita para completar la visión de Coase.</p>
-    </div>
-
-    <div class="answer-box" style="margin-top:3rem">
-      <div class="answer-tag">La conexión completa</div>
-      <p>Coase demostró que las empresas existen para reducir costos de transacción. La IA eliminó los costos de buscar, negociar y verificar — pero el dinero fiat los reintroduce todos. Bitcoin los elimina definitivamente. Juntos — la IA y Bitcoin — completan la visión de Coase: un mercado global donde la fricción tiende a cero.</p>
+    <div style="text-align:center;margin-top:3rem;padding:2rem 0">
+      <p style="font-family:var(--serif);font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:700;color:var(--g1);font-style:italic">"La pregunta no es si la IA va a cambiar las empresas.<br>La pregunta es qué va a quedar de ellas."</p>
+      <p style="color:var(--g2);font-size:.85rem;margin-top:1rem">— Desde la teoría de Coase, 1937 → 2026</p>
     </div>
   </div>
 </section>
@@ -965,10 +862,29 @@ function goIA(to){
       document.getElementById('iaZet').textContent=to==='after'?'Empresa':'← Empresa más eficiente';
       document.getElementById('iaZmt').textContent=to==='after'?'Mercado más eficiente (gracias a la IA) →':'Mercado más eficiente →';
       document.getElementById('iaIal').setAttribute('opacity',to==='after'?'1':'0');
-      document.getElementById('iaIns').textContent=to==='after'?'Si la IA elimina la fricción del mercado... ¿para qué necesita un banco?':'¿Qué pasa si una tecnología mueve este punto?';
+      document.getElementById('iaIns').textContent=to==='after'?'Si la IA elimina la fricción del mercado... ¿qué queda de las empresas?':'¿Qué pasa si una tecnología mueve este punto?';
     }
   }
   iaAnimId=requestAnimationFrame(step);
+}
+
+/* Seesaw Animation */
+var ssScenes=[
+  {tx:85,cd:5,tl:'Alto',cl:'\u2014',msg:'Sin empresa, toda la fricción está en el mercado. Tú pagas buscar, negociar y vigilar.',ar:0},
+  {tx:15,cd:50,tl:'Bajo',cl:'Medio',msg:'Creaste una empresa para absorber la fricción. Los costos de transacción bajan — pero aparecen los costos de coordinación.',ar:180},
+  {tx:8,cd:90,tl:'Mínimo',cl:'Muy alto',msg:'La empresa creció demasiado. La coordinación interna cuesta más que el mercado. Conviene volver al mercado.',ar:180}
+];
+function setSS(i){
+  document.getElementById('ssB0').className='ia-btn'+(i===0?' active':'');
+  document.getElementById('ssB1').className='ia-btn'+(i===1?' active':'');
+  document.getElementById('ssB2').className='ia-btn'+(i===2?' active':'');
+  var s=ssScenes[i];
+  document.getElementById('ssTB').style.height=s.tx+'%';
+  document.getElementById('ssCB').style.height=s.cd+'%';
+  document.getElementById('ssTV').textContent=s.tl;
+  document.getElementById('ssCV').textContent=s.cl;
+  document.getElementById('ssIns').textContent=s.msg;
+  document.getElementById('ssArr').style.transform='rotate('+s.ar+'deg)';
 }
 </script>
 </body>
